@@ -58,7 +58,7 @@ defmodule RigInboundGateway.Mixfile do
       {:ex2ms, "~> 1.0"},
       # Read and use application configuration from environment variables
       {:confex, "~> 3.3"},
-      {:uuid, "~> 1.1"},
+      {:uuid, "~> 1.1"}
     ]
   end
 

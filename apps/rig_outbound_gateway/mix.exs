@@ -42,6 +42,10 @@ defmodule RigOutboundGateway.MixProject do
       {:stubr, "~> 1.5"},
       # Run/manage the Kinesis Java client:
       {:porcelain, "~> 2.0"},
+      # Redis Elixir client:
+      {:redix, ">= 0.8.0"},
+      # Redix pub sub client modified for redis streams
+      {:redix_streams, git: "https://github.com/hlavacek/redix_pubsub", tag: "compiled", app: false}
     ]
   end
 end

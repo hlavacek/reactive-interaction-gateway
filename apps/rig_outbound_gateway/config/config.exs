@@ -53,6 +53,12 @@ config :rig, RigOutboundGateway.Kinesis.JavaClient,
   kinesis_endpoint: {:system, "KINESIS_ENDPOINT", ""},
   dynamodb_endpoint: {:system, "KINESIS_DYNAMODB_ENDPOINT", ""}
 
+config :rig, RigOutboundGateway.Redis.Client,
+  enabled?: {:system, :boolean, "REDIS_ENABLED", false},
+  redis_url: {:system, "REDIS_URL", "redis://localhost:6379"},
+  redis_channel: {:system, "REDIS_CHANNEL", "rig"},
+  redis_subscriber_group_name: {:system, "REDIS_SUBSCRIBER_GROUP_NAME", "rig"}
+
 config :porcelain, driver: Porcelain.Driver.Basic
 
 import_config "#{Mix.env()}.exs"
